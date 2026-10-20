@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Quiz AI Helper - DeepSeek",
+  "version": "1.0",
+  "description": "Chụp màn hình quiz và gửi cho AI DeepSeek để lấy câu trả lời",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Quiz AI Helper"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    { "matches": ["<all_urls>"], "js": ["content.js"] }
+    ]
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz AI Helper</title>
+  <style>
+    body {
+      width: 380px;
+      font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+      padding: 12px;
+      margin: 0;
+      background: #f7f8fa;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: #1a1a1a;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover { background: #4338ca; }
+    button:disabled { background: #a5a5a5; cursor: not-allowed; }
+
+    .status {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #666;
+      min-height: 18px;
+    }
+    .answer {
+      margin-top: 10px;
+      padding: 10px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 13px;
+      white-space: pre-wrap;
+      max-height: 320px;
+      overflow-y: auto;
+      line-height: 1.5;
+    }
+    .answer:empty { display: none; }
+    .preview {
+      margin-top: 8px;
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #e5e7eb;
+      display: none;
+    }
+    .preview.show { display: block; }
+  </style>
+</head>
+<body>
+  <h2>🎯 Quiz AI Helper</h2>
+  <button id="captureBtn">📸 Chụp màn hình & hỏi AI</button>
+  <div class="status" id="status"></div>
+  <img id="preview" class="preview" />
+  <div class="answer" id="answer"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
